@@ -9,7 +9,7 @@
   <meta name="author" content="Joe R. Nassimian">
 
   
-  <meta name="description" content="Blog Archives About Me A little something about me. Recent Posts GitHub Repos Status updating&#8230; @placidrage on GitHub $.domReady(function(){ if &hellip;">
+  <meta name="description" content="Blog Archives Joe R. Nassimian A technology enthusiast, a maker, and a computer scientist. Categories Tag Cloud Recent Posts GitHub Repos Status &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -25,6 +25,7 @@
   <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Joe's blog" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -35,10 +36,17 @@
 
 <body   >
   <header role="banner"><hgroup>
+  <div id="logo">
+  	<div id="logoLeft">{</div>
+  	<div id="logoText">jrn</div>
+  	<div id="logoRight">}</div>
+  	<div class="clear"></div>
+  </div>
   <h1><a href="/">Joe's blog</a></h1>
   
     <h2>A blog about engineering, technology and computer science</h2>
   
+  <div class="clear"></div>
 </hgroup>
 
 </header>
@@ -76,8 +84,16 @@
 <aside class="sidebar">
   
     <section>
-  <h1>About Me</h1>
-  <p>A little something about me.</p>
+  <h1>Joe R. Nassimian</h1>
+  <p>A technology enthusiast, a maker, and a computer scientist.</p>
+</section>
+<section>
+  <h1>Categories</h1>
+    <ul id="category-list"></ul>
+</section>
+<section>
+  <h1>Tag Cloud</h1>
+    <span id="tag-cloud"></span>
 </section>
 <section>
   <h1>Recent Posts</h1>
@@ -106,7 +122,7 @@
 
         github.showRepos({
             user: 'placidrage',
-            count: 10,
+            count: 4,
             skip_forks: true,
             target: '#gh_repos'
         });

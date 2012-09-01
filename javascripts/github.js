@@ -2,7 +2,7 @@ var github = (function(){
   function render(target, repos){
     var i = 0, fragment = '', t = $(target)[0];
 
-    for(i = 0; i < repos.length; ++i) {
+    for(i = 0; i < repos.length; i++) {
       fragment += '<li><a href="'+repos[i].html_url+'">'+repos[i].name+'</a><p>'+repos[i].description+'</p></li>';
     }
     t.innerHTML = fragment;
@@ -16,9 +16,9 @@ var github = (function(){
         , success: function(data) {
           var repos = [];
           if (!data || !data.data) { return; }
-          for (var i = 0; i < data.data.length; ++i) {
-              if (options.skip_forks && data.data[i].fork) { continue; }
-              repos.push(data.data[i]);
+          for (var i = 0; i < data.data.length; i++) {
+            if (options.skip_forks && data.data[i].fork) { continue; }
+            repos.push(data.data[i]);
           }
           repos.sort(function(a, b) {
             var aDate = new Date(a.pushed_at).valueOf(),
